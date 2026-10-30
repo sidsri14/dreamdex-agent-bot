@@ -108,6 +108,24 @@ npm start
 
 ---
 
+## 6. Official X Posts (Bounty Deliverable)
+
+Conforming to the dreamDEX Perps Builder Bounty requirement, the architecture, risk engine, and testnet audit findings were published on X / Twitter tagging `@DreamDEXSomnia`:
+
+1. **Post 1 — Architecture & Release Announcement:**  
+   [https://x.com/SidSri0228/status/2116204087452807484](https://x.com/SidSri0228/status/2116204087452807484)  
+   *Covers non-custodial session key delegation (`grantOperator`), Somnia v2 CLOB `placeOrder` execution, and 0.05% taker fee accounting.*
+
+2. **Post 2 — Institutional Risk Management & Liquidation Containment:**  
+   [https://x.com/SidSri0228/status/2116204369368756302](https://x.com/SidSri0228/status/2116204369368756302)  
+   *Covers dynamic liquidation price modeling (5.0% MMR), multi-tier alerts (12% margin call, 8% auto-deleverage, 5% emergency liquidation), and depth volume imbalance signals.*
+
+3. **Post 3 — Testnet Rigor & Formal Feedback Audit Report:**  
+   [https://x.com/SidSri0228/status/2116204523958222976](https://x.com/SidSri0228/status/2116204523958222976)  
+   *Covers 14/14 automated test verification and formal findings in [`feedback/FEEDBACK_REPORT.md`](feedback/FEEDBACK_REPORT.md).*
+
+---
+
 ## Developer Information
 - **Author:** Siddharth Srivastava ([@sidsri14](https://github.com/sidsri14))
 - **Email:** `sidsri1502@gmail.com`
