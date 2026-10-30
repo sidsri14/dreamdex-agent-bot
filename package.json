@@ -1,0 +1,28 @@
+{
+  "name": "dreamdex-agent-bot",
+  "version": "0.1.0",
+  "description": "Autonomous AI perpetual trading bot with session key risk management on Somnia Tokyo Testnet DreamDEX",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "test": "tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "dreamdex",
+    "somnia",
+    "perpetual-dex",
+    "clob",
+    "trading-bot",
+    "ai-agent",
+    "typescript"
+  ],
+  "author": "Siddharth Srivastava <sidsri1502@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.23.13",
+    "typescript": "^5.7.2"
+  }
+}
