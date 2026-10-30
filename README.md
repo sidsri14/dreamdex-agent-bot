@@ -92,6 +92,22 @@ npm start
 
 ---
 
+## 5. DoraHacks Submission Tracks
+
+### Track 1: MVP Track ($1,500 Pool — 3 × $500 Winners)
+- **Autonomous CLOB Perpetual Trading Engine** implemented on Somnia Tokyo Testnet.
+- Full session key operator delegation (`grantOperator`) with dynamic notional caps and expiration timestamps.
+- Direct integration with Somnia v2 `placeOrder(bool isBid, ...)` interface and 0.05% taker fee accounting.
+- Multi-tier institutional liquidation risk management (12% margin call, 8% deleverage, 5% MMR liquidation).
+
+### Track 2: Feedback & Vulnerability Track ($1,500 Pool)
+- Comprehensive vulnerability, contract desynchronization, and fee precision audit report documented in [`feedback/FEEDBACK_REPORT.md`](feedback/FEEDBACK_REPORT.md).
+- **Finding 1 [MAJOR]:** Interface Desynchronization in CLOB Order Placement (`placeTakerOrderWithoutVault` vs `placeOrder`).
+- **Finding 2 [MAJOR]:** Fractional Tick Size Precision Underflow in Taker Fee Calculation.
+- **Finding 3 [NORMAL]:** Session Key Operator Expiry Timestamp Boundary Ambiguity.
+
+---
+
 ## Developer Information
 - **Author:** Siddharth Srivastava ([@sidsri14](https://github.com/sidsri14))
 - **Email:** `sidsri1502@gmail.com`
