@@ -82,3 +82,29 @@ export interface AgentSignal {
   targetLeverage: number;
   triggerReason: string;
 }
+
+export interface VaultState {
+  vaultId: string;
+  symbol: string;
+  totalAssetsUsd: number;
+  totalShares: number;
+  sharePriceUsd: number;
+  annualizedApyPercent: number;
+  feeDistributionPoolUsd: number;
+}
+
+export interface StakerPosition {
+  userAddress: string;
+  vaultId: string;
+  shares: number;
+  depositedUsd: number;
+  unrealizedYieldUsd: number;
+  lastAccrualTimestamp: number;
+}
+
+export interface VaultRebalanceDecision {
+  action: "DEPOSIT_TO_VAULT" | "WITHDRAW_FROM_VAULT" | "MAINTAIN";
+  amountUsd: number;
+  reason: string;
+  targetMarginRatioPercent: number;
+}

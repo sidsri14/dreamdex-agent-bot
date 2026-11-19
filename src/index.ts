@@ -2,6 +2,7 @@ export * from "./types.js";
 export * from "./order-engine.js";
 export * from "./risk-manager.js";
 export * from "./strategy-agent.js";
+export * from "./vault-manager.js";
 
 import { DreamDexOrderEngine } from "./order-engine.js";
 import { DreamDexRiskManager } from "./risk-manager.js";
