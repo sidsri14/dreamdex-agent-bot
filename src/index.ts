@@ -7,6 +7,7 @@ export * from "./vault-manager.js";
 import { DreamDexOrderEngine } from "./order-engine.js";
 import { DreamDexRiskManager } from "./risk-manager.js";
 import { DreamDexStrategyAgent } from "./strategy-agent.js";
+import { DreamDEXVaultManager } from "./vault-manager.js";
 import { type OrderBookDepth, type SessionKeyOperatorConfig } from "./types.js";
 
 // CLI execution simulation
@@ -121,6 +122,23 @@ if (process.argv[1]?.includes("index")) {
       liquidationBuffer: `${risk.liquidationBufferPercent.toFixed(2)}%`,
       marginRatio: `${position.marginRatioPercent}%`,
       riskAction: risk.actionRequired,
+    });
+
+    // 6. Staking & Vault Fee Redistribution
+    const vault = new DreamDEXVaultManager("somnia-dreamdex-usdc-vault", "dvUSDC", 18.5);
+    const stakerDeposit = vault.deposit(operatorConfig.ownerAddress, 5000); // Deposit $5,000 into liquidity vault
+    vault.accrueProtocolFees(receipt.feeUsd); // Distribute 30% cut of trade fee
+    const rebalanceCheck = vault.evaluateCollateralRebalance(position, 1200, stakerDeposit);
+
+    console.log("\n[6. Liquidity Vault & Staking Yield State]:", {
+      vault: vault.getVaultState().vaultId,
+      sharesMinted: `${stakerDeposit.shares.toFixed(2)} ${vault.getVaultState().symbol}`,
+      vaultSharePrice: `$${vault.getVaultState().sharePriceUsd.toFixed(6)}`,
+      protocolFeeAccrued: `$${vault.getVaultState().feeDistributionPoolUsd.toFixed(6)} (30% share)`,
+      annualizedApy: `${vault.getVaultState().annualizedApyPercent}%`,
+      marginRebalanceAction: rebalanceCheck.action,
+      recommendedTransferUsd: `$${rebalanceCheck.amountUsd.toFixed(2)}`,
+      rebalanceReason: rebalanceCheck.reason,
     });
   }
 }
