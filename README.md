@@ -132,3 +132,11 @@ Conforming to the dreamDEX Perps Builder Bounty requirement, the architecture, r
 - **Payout PayPal:** `sidsri1302@gmail.com`
 - **Hackathon:** dreamDEX Perps Builder Bounty (DoraHacks)
 - **License:** MIT
+
+## Paid services (fixed scope)
+
+Bounded software services via no-signup Contra checkout: multi-repo CI reliability sprint (up to 5 repos, USD5,000 for one agreed milestone), checkout-link consistency gate (USD100), token-2022 CI/fee-math repair (USD150), BullMQ token-budget retrofit (USD300), one bounded OSS issue plus regression PR (USD75), and web3 starter CI harness (USD150).
+
+All offers: https://sidsri14.github.io/implementation-packages.html | Request work (no signup): https://sidsri14.github.io/request-work.html
+
+Proof: 25 merged upstream PRs / 30 total merged GitHub PRs; 201 passing tests across 15 owned repos. Independent, AI-assisted work; BCA student at Manipal University Jaipur, expected 2027, Lucknow, India. Advertised offers only, not received income; scope and written terms are agreed before any work starts.
