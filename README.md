@@ -139,4 +139,4 @@ Bounded software services via no-signup Contra checkout: multi-repo CI reliabili
 
 All offers: https://sidsri14.github.io/implementation-packages.html | Request work (no signup): https://sidsri14.github.io/request-work.html
 
-Proof: 25 merged upstream PRs / 30 total merged GitHub PRs; 201 passing tests across 15 owned repos. Independent, AI-assisted work; BCA student at Manipal University Jaipur, expected 2027, Lucknow, India. Advertised offers only, not received income; scope and written terms are agreed before any work starts.
+Proof: 25 merged upstream PRs / 30 total merged GitHub PRs; 201 passing tests across 15 owned repos. Independent AI-assisted work based in Lucknow, India. Advertised offers only, not received income; scope and written terms are agreed before any work starts.
